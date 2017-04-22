@@ -1,0 +1,27 @@
+<html ng-app="StrumApp"
+      ng-controller="StrumCtrl">
+<head>
+
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="index.css" />
+
+    <script type="text/javascript" src="lib/underscore.min.js"></script>
+    <script type="text/javascript" src="lib/angular.min.js"></script>
+
+    <script type="text/javascript" src="index.js"></script>
+
+</head>
+<body>
+
+    <div class="main">
+        <span class="pattern"
+             ng-repeat="active in pattern track by $index"
+             ng-init="strokeDir = stroke[$index]">
+            <i class="fa"
+               ng-class="{'fa-arrow-down': strokeDir, 'fa-arrow-up': !strokeDir, 'inactive': !active}"
+               aria-hidden="true"></i>
+        </span>
+    </div>
+
+</body>
+</html>

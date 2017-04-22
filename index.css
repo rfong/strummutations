@@ -1,0 +1,23 @@
+.inactive {
+    opacity: 0.1;
+}
+
+body {
+    position: relative;
+}
+
+.main {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 50%;
+    margin-top: -0.5em;
+    font-size: 48px;
+}
+
+.fa-arrow-down {
+    color: #5c9553;
+}
+.fa-arrow-up {
+    color: #8c2828;
+}
