@@ -1,26 +1,42 @@
-=letterpress
-    text-shadow: 1px 1px rgba(255,255,255,0.5)
-
-.inactive 
-    opacity: 0.2
-
+@import _mixins
 
 body 
-    position: relative
-    background-image: url('images/purty_wood_@2X.png')
-    background-size: 500px
-    background-repeat: repeat
-    +letterpress
+  position: relative
+  background-image: url('images/purty_wood_@2X.png')
+  background-size: 500px
+  background-repeat: repeat
+  +letterpress
 
 .main 
-    position: absolute
-    text-align: center
-    width: 100%
-    top: 50%
-    margin-top: -0.5em
-    font-size: 48px
+  position: absolute
+  text-align: center
+  width: 100%
+  top: 50%
+  margin-top: -0.5em
+  font-size: 48px
+
+.pattern
+  +unselectable
+  i.fa
+    +transition
+    opacity: 1
+    &.inactive
+      opacity: 0.2
 
 .fa-arrow-down 
-    color: #79a448
+  color: #79a448
 .fa-arrow-up 
-    color: #c33f3f
+  color: #c33f3f
+
+
+.button
+  +button
+  padding: 0
+  +border-radius(5px)
+  +transition
+  +letterpress
+
+  color: #000
+  opacity: 0.4
+  &:hover
+    opacity: 0.7
